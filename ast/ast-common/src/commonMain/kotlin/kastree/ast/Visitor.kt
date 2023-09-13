@@ -311,6 +311,9 @@ open class Visitor {
             is Node.Modifier.Lit -> {}
             is Node.Extra.BlankLines -> {}
             is Node.Extra.Comment -> {}
+            else -> {
+                throw AssertionError("Unhandled node: $this")
+            }
         }
     }
 
